@@ -58,6 +58,7 @@
     <Compile Include="Assets\Scenes\Game03\PlayerMove.cs" />
     <Compile Include="Assets\Scenes\Game03\Game03Controller.cs" />
     <Compile Include="Assets\Scenes\Game03\AnpleController.cs" />
+    <Compile Include="Assets\Scenes\Ending\EndingText.cs" />
     <Compile Include="Assets\Scenes\Game01\DecideButton.cs" />
     <Compile Include="Assets\Scenes\Game01\MedicineMaterial.cs" />
     <Compile Include="Assets\Scenes\Game03\HumanMove_Dinamic.cs" />
@@ -68,13 +69,21 @@
     <Compile Include="Assets\Scenes\Game01\RightArrowButton.cs" />
     <Compile Include="Assets\Scenes\Game03\SyringeController.cs" />
     <Compile Include="Assets\Scenes\TItle\StartButton.cs" />
+    <Compile Include="Assets\Scenes\Ending\EndingController.cs" />
     <Compile Include="Assets\Scenes\Game02\Game02Controller.cs" />
     <Compile Include="Assets\Scenes\Game01\Game01Controller.cs" />
+    <Compile Include="Assets\Scenes\Ending\ButonController.cs" />
     <Compile Include="Assets\Scenes\Game02\GameModeSetting.cs" />
     <Compile Include="Assets\Scenes\Game02\Ending.cs" />
-    <Compile Include="Assets\Scenes\Ending\EndingController.cs" />
-    <Compile Include="Assets\Scenes\Ending\EndingText.cs" />
-    <Compile Include="Assets\Scenes\Ending\ButonController.cs" />
+    <Compile Include="Assets\Scenes\TItle\RuleButton.cs" />
+    <Compile Include="Assets\Scenes\TItle\RuleController.cs" />
+    <Compile Include="Assets\Scenes\TItle\StoryController.cs" />
+    <Compile Include="Assets\Scenes\TItle\StoryButton.cs" />
+    <Compile Include="Assets\Scenes\TItle\CreditButton.cs" />
+    <Compile Include="Assets\Scenes\TItle\CreditController.cs" />
+    <Compile Include="Assets\Scenes\TItle\SettingController.cs" />
+    <Compile Include="Assets\Scenes\TItle\SettingButton.cs" />
+    <Compile Include="Assets\Scenes\MusicBox.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

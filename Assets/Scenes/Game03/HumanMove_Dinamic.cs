@@ -9,7 +9,6 @@ public class HumanMove_Dinamic : MonoBehaviour
     float[] movespeed = new float[2];
     float[] movespeedRange = new float[2] { 1.0f, 2.0f };
 
-    float time = 0;
 
 
     Rigidbody2D rb;
@@ -31,7 +30,6 @@ public class HumanMove_Dinamic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        time = 0;
         //スピードを決める
         for (int i = 0; i < movespeed.Length; i++)
         {
@@ -44,7 +42,6 @@ public class HumanMove_Dinamic : MonoBehaviour
         //rb.AddForce(transform.right * movespeed[0], ForceMode2D.Impulse);
         //rb.AddForce(transform.up * movespeed[1], ForceMode2D.Impulse);
 
-        time = 0;
     }
 
     //人間の移動

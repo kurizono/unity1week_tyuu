@@ -7,6 +7,7 @@ TagManager:
   - human
   - OutFlame
   - InFlame
+  - MusicBox
   layers:
   - Default
   - TransparentFX

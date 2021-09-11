@@ -35,6 +35,22 @@ public class Game01Controller : MonoBehaviour
         First();
     }
 
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && LeftArrowButton.gameObject.activeSelf)
+        {
+            LeftArrowClick();
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow) && RightArrowButton.gameObject.activeSelf)
+        {
+            RightArrowClick();
+        }
+        else if (Input.GetKeyDown(KeyCode.Z) && DecideButton.gameObject.activeSelf)
+        {
+            DecideClick();
+        }
+    }
+
 
     //ç≈èâÇÕäÛñ]
     void First()

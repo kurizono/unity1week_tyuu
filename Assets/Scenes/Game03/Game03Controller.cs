@@ -12,6 +12,8 @@ public class Game03Controller : MonoBehaviour
     public GameObject humanpre;
     public GameObject humanPare;
 
+    public GameObject GoEnding;
+
     public Sprite health, mad;
 
     GameObject[] humans;
@@ -59,6 +61,7 @@ public class Game03Controller : MonoBehaviour
         }
         GameModeSet();
         CountHuman();
+        GoEnding.SetActive(false);
     }
 
     // Update is called once per frame
@@ -134,7 +137,12 @@ public class Game03Controller : MonoBehaviour
         HumanScore.text = sickhumannum + "/" + humans.Length;
         if (sickhumannum == humans.Length)
         {
-            SceneManager.LoadScene("Ending");
+            GoEnding.SetActive(true);
         }
+    }
+
+    public void Ending()
+    {
+        SceneManager.LoadScene("Ending");
     }
 }

@@ -6,9 +6,11 @@ public class MusicBox : MonoBehaviour
 {
 	private static MusicBox instance;
 
-    public AudioSource BGM;
-    public AudioClip MissingScrewing01, MissingScrewing02, Shot;
+    public AudioSource BGM, SE;
+    public AudioClip MissingScrewing01, MissingScrewing02, Shot, Orction;
     AudioClip[] musics;
+
+    static float SEvolume;
 
     public float nowmusicvolume;
     int musicnum;
@@ -28,7 +30,7 @@ public class MusicBox : MonoBehaviour
             Destroy(gameObject);
         }
 
-        musics = new AudioClip[3] { MissingScrewing01, MissingScrewing02, Shot };
+        musics = new AudioClip[4] { MissingScrewing01, MissingScrewing02, Shot, Orction };
         musicnum = 2;
     }
 
@@ -55,5 +57,9 @@ public class MusicBox : MonoBehaviour
         return musics[musicnum].name;
     }
 
+    public void SEVolumeChange()
+    {
+        SE.volume = (float)SettingController.SEsoundvolume.value / 100;
+    }
 
 }

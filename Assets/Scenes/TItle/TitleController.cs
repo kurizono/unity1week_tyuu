@@ -11,7 +11,7 @@ public class TitleController : MonoBehaviour
     SettingController settingcs;
 
     public Button gameStart_Button, story_Button,  rule_Button, setting_Button, credit_Button, next_Button, pre_Button, return_Button01, return_Button02;
-    public GameObject rule01, rule02, rule03, story01, story02, story03, credit, setting;
+    public GameObject rule01, rule02, rule03, story01, story02, story03, credit, setting, Title;
 
     private GameObject[] allObj;
     private GameObject[] defaultObj;
@@ -28,12 +28,12 @@ public class TitleController : MonoBehaviour
              gameStart_Button.gameObject, story_Button.gameObject, rule_Button.gameObject, setting_Button.gameObject, credit_Button.gameObject,
              next_Button.gameObject, pre_Button.gameObject,return_Button01.gameObject, return_Button02.gameObject,
 
-             rule01, rule02, rule03, story01, story02, story03, credit, setting
+             rule01, rule02, rule03, story01, story02, story03, credit, setting, Title
         };
 
-        defaultObj = new GameObject[5]
+        defaultObj = new GameObject[6]
         {
-            gameStart_Button.gameObject, story_Button.gameObject, rule_Button.gameObject, setting_Button.gameObject, credit_Button.gameObject
+            gameStart_Button.gameObject, story_Button.gameObject, rule_Button.gameObject, setting_Button.gameObject, credit_Button.gameObject, Title
         };
     }
 

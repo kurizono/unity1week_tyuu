@@ -5,6 +5,9 @@ using UnityEngine;
 public class HumanMove_Dinamic : MonoBehaviour
 {
     Game03Controller controllercs;
+    MusicBox musicboxcs;
+
+    AudioSource audioSource;
 
     float[] movespeed = new float[2];
     float[] movespeedRange = new float[2] { 1.0f, 2.0f };
@@ -23,6 +26,8 @@ public class HumanMove_Dinamic : MonoBehaviour
         GameObject controllerobj = GameObject.FindGameObjectWithTag("GameController");
         controllercs = controllerobj.GetComponent<Game03Controller>();
 
+        audioSource = GetComponent<AudioSource>();
+
         MainSpriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
         rb = this.GetComponent<Rigidbody2D>();
     }
@@ -30,6 +35,9 @@ public class HumanMove_Dinamic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject musicbox = GameObject.FindGameObjectWithTag("MusicBox");
+        musicboxcs = musicbox.GetComponent<MusicBox>();
+
         //スピードを決める
         for (int i = 0; i < movespeed.Length; i++)
         {
@@ -66,6 +74,8 @@ public class HumanMove_Dinamic : MonoBehaviour
         if (this.gameObject.GetComponent<SpriteRenderer>().sprite != Sick)
         {
             MainSpriteRenderer.sprite = Sick;
+            audioSource.volume = musicboxcs.SE.volume;
+            audioSource.Play();
             switch (Game01Controller.medicineInfo[0])
             {
                 //増える

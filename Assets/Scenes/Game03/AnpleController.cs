@@ -15,9 +15,11 @@ public class AnpleController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision);
         //人間に当たれば洗脳される
         if (collision.CompareTag("human"))
         {
+            Debug.Log(collision);
             humanmovecs = collision.gameObject.GetComponent<HumanMove_Dinamic>();
             humanmovecs.Change();
             //オブジェクトを削除

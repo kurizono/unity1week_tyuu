@@ -12,9 +12,11 @@ public class SettingController : MonoBehaviour
     public Button changeButton;
     Button returnButton;
 
-    public Slider BGM;
-    public static Slider BGMsoundvolume;
+    public GameObject title;
+    public Slider BGM, SE;
+    public static Slider BGMsoundvolume, SEsoundvolume;
     public Text BGMValumeText, BGMNameText;
+    public Text SEValumeText;
 
     [SerializeField]
     GameObject setting;
@@ -26,6 +28,7 @@ public class SettingController : MonoBehaviour
     void Awake()
     {
         BGMsoundvolume = BGM;
+        SEsoundvolume = SE;
         controllercs = GetComponent<TitleController>();
         returnButton = controllercs.return_Button02;
 
@@ -34,6 +37,10 @@ public class SettingController : MonoBehaviour
         BGMsoundvolume.maxValue = maxvolume;
         BGMsoundvolume.minValue = minvolume;
         BGMValumeText.text = BGMsoundvolume.value.ToString();
+
+        SEsoundvolume.maxValue = maxvolume;
+        SEsoundvolume.minValue = minvolume;
+        SEValumeText.text = SEsoundvolume.value.ToString();
     }
 
     private void Start()
@@ -49,6 +56,7 @@ public class SettingController : MonoBehaviour
     {
         setting.SetActive(true);
         returnButton.gameObject.SetActive(true);
+        title.SetActive(true);
         ButtonAddListener();
     }
 
@@ -79,5 +87,9 @@ public class SettingController : MonoBehaviour
         BGMValumeText.text = BGMsoundvolume.value.ToString();
         musicboxcs.BGMVolumeChange();
     }
-
+    public void SEVolumeChange()
+    {
+        SEValumeText.text = SEsoundvolume.value.ToString();
+        musicboxcs.SEVolumeChange();
+    }
 }
